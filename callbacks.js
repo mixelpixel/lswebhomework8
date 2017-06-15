@@ -89,7 +89,6 @@ multiplyNums(5, 10, (product) => {
 // 6) Write a function called contains that checks if an item is present inside of the given array.
 // Pass true to the callback if it is, otherwise pass false
 
-// version 1
 var contains = (anArray, anItem, cb) => {
   for (var i = 0; i < anArray.length; i++) {
     if (anArray[i] === anItem) {
@@ -97,7 +96,6 @@ var contains = (anArray, anItem, cb) => {
     };
   } return cb(false);
 };
-
 
 contains(foods, 'ribeye', (result) => {
   console.log(result ? 'ribeye is in the array' : 'ribeye is not in the array');
