@@ -64,7 +64,7 @@ last(foods, (lastItem) => {
 });
 
 
-// // 4) Write a function called sumNums that adds two numbers and passes the result to the callback
+// 4) Write a function called sumNums that adds two numbers and passes the result to the callback
 
 var sumNums = (x, y, cb) => {
   cb(x + y);
@@ -86,13 +86,24 @@ multiplyNums(5, 10, (product) => {
 });
 
 
-// // 6) Write a function called contains that checks if an item is present inside of the given array.
-// // Pass true to the callback if it is, otherwise pass false
-//
-// contains(foods, 'ribeye', (result) => {
-//   console.log(result ? 'ribeye is in the array' : 'ribeye is not in the array');
-// });
-//
+// 6) Write a function called contains that checks if an item is present inside of the given array.
+// Pass true to the callback if it is, otherwise pass false
+
+// version 1
+var contains = (anArray, anItem, cb) => {
+  for (var i = 0; i < anArray.length; i++) {
+    if (anArray[i] === anItem) {
+      return cb(true);
+    };
+  } return cb(false);
+};
+
+
+contains(foods, 'ribeye', (result) => {
+  console.log(result ? 'ribeye is in the array' : 'ribeye is not in the array');
+});
+
+
 // // 7) Write a function called removeDuplicates that removes all duplicate values from the given array.
 // // Pass the array to the callback function.  Do not mutate the original array.
 //
