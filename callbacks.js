@@ -54,12 +54,14 @@ getLength(foods, (length) => {
 
 
 // 3) Write a function called last which passes the last item of the array into the callback
-//
-// var last =
-//
-// last(foods, (lastItem) => {
-//   console.log('The last item in the array is ' + lastItem);
-// });
+
+var last = (anArray, cb) => {
+  cb(anArray.pop());
+}
+
+last(foods, (lastItem) => {
+  console.log('The last item in the array is ' + lastItem);
+});
 
 
 // // 4) Write a function called sumNums that adds two numbers and passes the result to the callback
