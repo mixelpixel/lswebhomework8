@@ -38,9 +38,15 @@ firstItem(foods, (firstItem) => {
 
 // 2) Write a function called getLength that passes the length of the array into the callback
 
+// version 1
 var getLength = (anArray, cb) => {
   cb(anArray.length);
 };
+
+// version 2
+// var getLength = function(anArray, cb) {
+//   cb(anArray.length);
+// };
 
 getLength(foods, (length) => {
   console.log('The length of the array is ' + length);
