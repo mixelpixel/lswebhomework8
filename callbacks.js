@@ -75,12 +75,17 @@ sumNums(5, 10, (sum) => {
 });
 
 
-// // 5) Write a function called multiplyNums that adds two numbers and passes the result to the callback
-//
-// multiplyNums(5, 10, (product) => {
-//   console.log('The product is ' + product);
-// });
-//
+// 5) Write a function called multiplyNums that adds two numbers and passes the result to the callback
+
+var multiplyNums = (x, y, cb) => {
+  cb(x * y);
+};
+
+multiplyNums(5, 10, (product) => {
+  console.log('The product is ' + product);
+});
+
+
 // // 6) Write a function called contains that checks if an item is present inside of the given array.
 // // Pass true to the callback if it is, otherwise pass false
 //
