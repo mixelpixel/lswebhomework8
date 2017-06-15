@@ -20,11 +20,18 @@
 
 var foods = ['pineapple', 'mango', 'ribeye', 'curry', 'tacos', 'ribeye', 'mango'];
 
+function firstItem(arr, cb){
+	return arr[0];
+}
+
 firstItem(foods, (firstItem) => {
-  console.log('The first item is ' + firstItem);
+  	console.log('The first item is ' + firstItem);
 });
 
 // Write a function called getLength that passes the length of the array into the callback
+function getLength (arr, cb){
+	return arr.length;
+}
 
 getLength(foods, (length) => {
   console.log('The length of the array is ' + length);
@@ -32,17 +39,29 @@ getLength(foods, (length) => {
 
 // Write a function called last which passes the last item of the array into the callback
 
+function last (arr, cb){
+	return arr[arr.length - 1];
+}
+
 last(foods, (lastItem) => {
   console.log('The last item in the array is ' + lastItem);
 });
 
 // Write a function called sumNums that adds two numbers and passes the result to the callback
 
+function sumNums (x, y, cb){
+	return x + y;
+}
+
 sumNums(5, 10, (sum) => {
   console.log('The sum is ' + sum);
 });
 
 // Write a function called multiplyNums that adds two numbers and passes the result to the callback
+
+function multiplyNums (x, y, cb){
+	return x * y;
+}
 
 multiplyNums(5, 10, (product) => {
   console.log('The product is ' + product);
@@ -51,12 +70,27 @@ multiplyNums(5, 10, (product) => {
 // Write a function called contains that checks if an item is present inside of the given array.
 // Pass true to the callback if it is, otherwise pass false
 
+function contains(arr, str, cb){
+	return arr.includes(str);
+
+}
+
 contains(foods, 'ribeye', (result) => {
   console.log(result ? 'ribeye is in the array' : 'ribeye is not in the array');
 });
 
 // Write a function called removeDuplicates that removes all duplicate values from the given array.
 // Pass the array to the callback function.  Do not mutate the original array.
+
+function removeDuplicates (arr, cb){
+	var uniqueFoods = [];
+	for (var i = 0; i < arr.length; i++){
+		if (arr[i].indexOf !== i){
+			uniqueFoods.push(arr[i]);
+		}
+	}
+	
+}
 
 removeDuplicates(foods, (uniqueFoods) => {
   console.log('foods with duplicates removed: ' + uniqueFoods);
