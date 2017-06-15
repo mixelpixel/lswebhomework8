@@ -29,12 +29,17 @@ firstItem(foods, (firstItem) => {
 });
 
 
-// // 2) Write a function called getLength that passes the length of the array into the callback
-//
-// getLength(foods, (length) => {
-//   console.log('The length of the array is ' + length);
-// });
-//
+// 2) Write a function called getLength that passes the length of the array into the callback
+
+var getLength = (anArray, cb) => {
+  cb(anArray.length);
+};
+
+getLength(foods, (length) => {
+  console.log('The length of the array is ' + length);
+});
+
+
 // // 3) Write a function called last which passes the last item of the array into the callback
 //
 // last(foods, (lastItem) => {
