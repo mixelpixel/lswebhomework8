@@ -18,9 +18,16 @@
 
 // 1) Write a function called firstItem that passes the first item of the given array to the callback function
 
+// version 1
 var firstItem = (anArray, cb) => {
   cb(anArray[0]);
 };
+
+// version 2
+// The above syntax is identical to the following explicit "function" declaration:
+// var firstItem = function(anArray, cb) {
+//   cb(anArray[0]);
+// };
 
 var foods = ['pineapple', 'mango', 'ribeye', 'curry', 'tacos', 'ribeye', 'mango'];
 
@@ -40,12 +47,15 @@ getLength(foods, (length) => {
 });
 
 
-// // 3) Write a function called last which passes the last item of the array into the callback
+// 3) Write a function called last which passes the last item of the array into the callback
+//
+// var last =
 //
 // last(foods, (lastItem) => {
 //   console.log('The last item in the array is ' + lastItem);
 // });
-//
+
+
 // // 4) Write a function called sumNums that adds two numbers and passes the result to the callback
 //
 // sumNums(5, 10, (sum) => {
