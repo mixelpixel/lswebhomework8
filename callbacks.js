@@ -116,8 +116,14 @@ removeDuplicates(foods, (uniqueFoods) => {
 });
 
 
-// // 8) Write a function called forEach that iterates over the provided array and passes the value and index into the callback.
-//
-// forEach(foods, (value, index) => {
-//   console.log('${value} is at index ' + index);
-// });
+// 8) Write a function called forEach that iterates over the provided array and passes the value and index into the callback.
+
+var forEach = (anArray, cb) => {
+  for (i = 0; i < anArray.length; i++) {
+    cb(anArray[i], i);
+  }
+};
+
+forEach(foods, (value, index) => {
+  console.log('${value} is at index ' + index);
+});
