@@ -57,7 +57,7 @@ getLength(foods, (length) => {
 
 var last = (anArray, cb) => {
   cb(anArray.pop());
-}
+};
 
 last(foods, (lastItem) => {
   console.log('The last item in the array is ' + lastItem);
@@ -65,11 +65,16 @@ last(foods, (lastItem) => {
 
 
 // // 4) Write a function called sumNums that adds two numbers and passes the result to the callback
-//
-// sumNums(5, 10, (sum) => {
-//   console.log('The sum is ' + sum);
-// });
-//
+
+var sumNums = (x, y, cb) => {
+  cb(x + y);
+};
+
+sumNums(5, 10, (sum) => {
+  console.log('The sum is ' + sum);
+});
+
+
 // // 5) Write a function called multiplyNums that adds two numbers and passes the result to the callback
 //
 // multiplyNums(5, 10, (product) => {
