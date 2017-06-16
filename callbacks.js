@@ -105,5 +105,5 @@ function forEach(arr, cb){
 }
 
 forEach(foods, (value, index) => {
-  console.log('${value} is at index ' + index);
+  console.log(`${value} is at index ` + index);
 });
