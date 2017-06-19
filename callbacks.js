@@ -105,11 +105,26 @@ contains(foods, 'ribeye', (result) => {
 // 7) Write a function called removeDuplicates that removes all duplicate values from the given array.
 // Pass the array to the callback function.  Do not mutate the original array.
 
+// version 1: using the Set data dtructure
 // ES6 style: a set contains no duplicates
 // per: https://stackoverflow.com/a/9229821/5225057
 var removeDuplicates = (anArray, cb) => {
   return cb(Array.from(new Set(anArray)));
 };
+
+// version 2: nested for-loops
+// var uniqueFoods = [];
+// function removeDuplicates(foods, cb) {
+//     for (var i = 0; i <= foods.length; i++) {
+//       uniqueFoods.push(foods[i]);
+//       for (var j = i+1; j <= foods.length; j++) {
+//         if (foods[i] === foods[j]) {
+//           uniqueFoods.pop(foods[i]);
+//         }
+//       }
+//     }
+//   cb(uniqueFoods)
+// };
 
 removeDuplicates(foods, (uniqueFoods) => {
   console.log('foods with duplicates removed: ' + uniqueFoods);
